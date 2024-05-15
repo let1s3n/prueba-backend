@@ -4,9 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "dev": "tsx watch src/index.ts",
+    "build": "NODE_ENV=production tsc",
+    "start": "NODE_ENV=production node dist/index.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@tsconfig/node18": "^18.2.4",
+    "@types/node": "^20.12.12",
+    "tsx": "^4.10.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
 }
