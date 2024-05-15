@@ -1,9 +1,6 @@
 const sql = require("mssql");
 const respuesta4: any = { respuesta: "" };
 respuesta4.respuesta = (req: any, res: any) => {
-  /* const users = await User.find();
-  res.json(users); */
-  /* console.log("req.app.locals.db: ", req.app.locals.db); */
   req.app.locals.db.query(
     "SELECT * FROM Producto",
     function (err: any, recordset: any) {

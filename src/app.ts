@@ -10,13 +10,10 @@ const app = express();
 
 const sharePool = async () => {
   app.locals.db = await conectarBD();
-  /* console.log("app.locals.db: ", app.locals.db); */
 };
 app.set("port", 80);
 app.set("json spaces", 2);
 
-//Middlewares
-/* app.use(morgan('dev')); */
 app.use(cors());
 app.use(express.json());
 sharePool();
