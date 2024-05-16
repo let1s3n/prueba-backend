@@ -7,7 +7,7 @@ const sqlConfig: any = {
     idleTimeoutMillis: 60000,
   },
   options: {
-    trustServerCertificate: true, // change to true for local dev / self-signed certs
+    trustServerCertificate: true,
   },
   parseJSON: true,
 };

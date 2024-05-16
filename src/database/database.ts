@@ -1,9 +1,8 @@
 import sql from "mssql";
-import sqlConfig from "./utils/dbconfig";
+import sqlConfig from "./dbconfig";
 
 const conectarBD = async () => {
   try {
-    // make sure that any items are correctly URL encoded in the connection string
     return await sql.connect({
       ...sqlConfig,
       beforeConnect: (conn) => {
@@ -15,9 +14,6 @@ const conectarBD = async () => {
         });
       },
     });
-
-    /* const result = await sql.query(`SELECT * FROM Producto`);
-  console.log(result); */
   } catch (err) {
     console.error(err);
     return undefined;

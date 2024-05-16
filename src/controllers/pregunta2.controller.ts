@@ -1,4 +1,3 @@
-const sql = require("mssql");
 const respuesta2: any = { respuesta: "" };
 respuesta2.respuesta = (req: any, res: any) => {
   req.app.locals.db.query(
